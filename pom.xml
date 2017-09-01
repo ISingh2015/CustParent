@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.cust</groupId>
+    <artifactId>CustParent</artifactId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
+    
+    <!-- The Parent POM containing all the necessary and needed ARTIFCATS for the CUSTSERVICE,
+         CUSTSERVICEWEB and CUSTWEB. ASLO contains the jars for the SWING Client
+         03/03/2016  By Inderjit
+    -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>        
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>        
+        <java-version>1.8</java-version>
+        <org.hibernate-version>4.3.10.Final</org.hibernate-version>
+        <org.hibernate.validator-version>4.3.0.Final</org.hibernate.validator-version>        
+        <org.springframework-version>4.0.3.RELEASE</org.springframework-version>
+        <org.springframework.integration-version>2.0.0.M4</org.springframework.integration-version>
+        <org.springframework.security-version>3.0.2.RELEASE</org.springframework.security-version>
+        <org.richfaces.bom.version>4.3.3.Final</org.richfaces.bom.version>
+        <apache.activemq.version>5.13.0</apache.activemq.version>
+        <org.slf4j-version>1.5.6</org.slf4j-version>
+        <org.aspectj-version>1.6.8</org.aspectj-version>
+        <org.custapp-version>0.0.1</org.custapp-version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${org.richfaces.bom.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+    
+    <repositories>
+        <repository>
+            <id>maven2.repository</id>
+            <name>Repository for Maven by Maven</name>
+            <url>http://repo2.maven.org/maven2</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>dbunit-maven-plugin</artifactId>
+            <version>1.0-beta-3</version>
+        </dependency>
+        
+        <!-- Spring Framework-->        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <!--        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>${org.activemq}</version>
+        </dependency>-->
+
+        <!--        <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-web</artifactId>
+                    <version>${org.springframework-version}</version>
+                </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.7.4</version>
+        </dependency>                                            
+                                            
+        <!--HIBERNATE FRAMEWORK DEPENDENCIES -->
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${org.hibernate-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${org.hibernate-version}</version>
+        </dependency>
+        <!--        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${org.hibernate.validator-version}</version>
+        </dependency>-->
+        
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-envers</artifactId>
+            <version>${org.hibernate-version}</version>
+        </dependency>
+        <!-- EHCache Core APIs -->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+            <version>2.6.9</version>
+        </dependency>
+        <!-- Hibernate EHCache API -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>${org.hibernate-version}</version>
+        </dependency>
+        
+        <!-- Microsoft JDBC 4 Drivers
+               <dependency>
+                   <groupId>com.microsoft.sqlserver</groupId>
+                   <artifactId>sqljdbc4</artifactId>
+                   <version>3.0</version>
+               </dependency>
+        -->        
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>6.1.0.jre8</version>
+        </dependency>
+        
+        <!-- Hessian Exporter -->
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>4.0.7</version>
+        </dependency>
+        
+        <!-- SL4J and logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j-version}</version>
+            <!--<scope>compile</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${org.slf4j-version}</version>
+
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        
+        <!-- XSTREAM XML parser -->
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+        
+        <!-- COMM communication
+               <dependency>
+                   <groupId>com.javax</groupId>
+                   <artifactId>comm</artifactId>
+                   <version>2.3.0</version>
+               </dependency>
+        -->        
+        <!-- Send EMAIL -->        
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.5</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        
+        <!-- RichFaces components -->
+        <dependency>
+            <groupId>org.richfaces.core</groupId>
+            <artifactId>richfaces-core-impl</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-components-ui</artifactId>
+        </dependency>
+
+        <!--        <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
+            <version>1.2.1</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.richfaces/richfaces -->
+        <!--        <dependency>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces</artifactId>
+            <version>4.5.1.Final</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.1.19</version>
+        </dependency>
+ 		
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>2.1.19</version>			
+        </dependency>
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>el-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>el-impl</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!--
+                <dependency>
+                    <groupId>com.googlecode.gmaps4jsf</groupId>
+                    <artifactId>gmaps4jsf-core</artifactId>
+                    <version>3.0.1</version>
+                </dependency>
+        -->        
+        <!-- SWING application controls-->
+        <dependency>
+            <groupId>org.swinglabs.swingx</groupId>
+            <artifactId>swingx-all</artifactId>
+            <version>1.6.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.jms</groupId>
+            <artifactId>javax.jms-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <!--        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>${apache.activemq.version}</version>
+        </dependency>             -->
+        <!--        <dependency>
+            <groupId>org.apache.activemq.tooling</groupId>
+            <artifactId>activemq-junit</artifactId>
+            <version>5.13.2</version>
+        </dependency>-->
+        <!--        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-broker</artifactId>
+            <version>${apache.activemq.version}</version>
+        </dependency>-->
+        
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java-version}</source>
+                    <target>${java-version}</target>
+                </configuration>
+            </plugin>
+            <!--            <plugin> 
+                <groupId>com.github.goldin</groupId> 
+                <artifactId>copy-maven-plugin</artifactId> 
+                <version>0.2.5</version> 
+                <executions> 
+                    <execution> 
+                        <id>deploy-to-local-directory</id> 
+                        <phase>install</phase> 
+                        <goals> 
+                            <goal>copy</goal> 
+                        </goals> 
+                        <configuration> 
+                            <skipIdentical>false</skipIdentical> 
+                            <failIfNotFound>false</failIfNotFound> 
+                            <resources> 
+                                <resource> 
+                                    <description>Copy artifact to another directory</description> 
+                                    <targetPath>D:\workspacejuno09012013\CustServiceWeb\WebContent\WEB-INF\lib</targetPath> 
+                                    <directory>${project.build.directory}</directory> 
+                                    <includes> 
+                                        <include>*.jar</include> 
+                                    </includes> 
+                                </resource> 
+                            </resources> 
+                        </configuration> 
+                    </execution> 
+                </executions> 
+            </plugin>-->
+        </plugins>
+    </build>    
+</project>
