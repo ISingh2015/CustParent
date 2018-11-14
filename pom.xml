@@ -112,23 +112,6 @@
             <version>${org.springframework-version}</version>
         </dependency>
 
-        <!--        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jms</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-all</artifactId>
-            <version>${org.activemq}</version>
-        </dependency>-->
-
-        <!--        <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-web</artifactId>
-                    <version>${org.springframework-version}</version>
-                </dependency>
-        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -166,12 +149,7 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${org.hibernate-version}</version>
         </dependency>
-        <!--        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>${org.hibernate.validator-version}</version>
-        </dependency>-->
-        
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-envers</artifactId>
@@ -191,13 +169,6 @@
         </dependency>
         
         <!-- Microsoft JDBC 4 Drivers
-               <dependency>
-                   <groupId>com.microsoft.sqlserver</groupId>
-                   <artifactId>sqljdbc4</artifactId>
-                   <version>3.0</version>
-               </dependency>
-        -->        
-        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
@@ -245,13 +216,6 @@
             <version>1.4.7</version>
         </dependency>
         
-        <!-- COMM communication
-               <dependency>
-                   <groupId>com.javax</groupId>
-                   <artifactId>comm</artifactId>
-                   <version>2.3.0</version>
-               </dependency>
-        -->        
         <!-- Send EMAIL -->        
         <dependency>
             <groupId>javax.mail</groupId>
@@ -282,18 +246,6 @@
             <groupId>org.richfaces.ui</groupId>
             <artifactId>richfaces-components-ui</artifactId>
         </dependency>
-
-        <!--        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
-            <version>1.2.1</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/org.richfaces/richfaces -->
-        <!--        <dependency>
-            <groupId>org.richfaces</groupId>
-            <artifactId>richfaces</artifactId>
-            <version>4.5.1.Final</version>
-        </dependency>-->
 
         <dependency>
             <groupId>com.sun.faces</groupId>
@@ -327,13 +279,7 @@
             <artifactId>jsr250-api</artifactId>
             <version>1.0</version>
         </dependency>
-        <!--
-                <dependency>
-                    <groupId>com.googlecode.gmaps4jsf</groupId>
-                    <artifactId>gmaps4jsf-core</artifactId>
-                    <version>3.0.1</version>
-                </dependency>
-        -->        
+
         <!-- SWING application controls-->
         <dependency>
             <groupId>org.swinglabs.swingx</groupId>
@@ -346,22 +292,6 @@
             <artifactId>javax.jms-api</artifactId>
             <version>2.0</version>
         </dependency>
-        <!--        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-all</artifactId>
-            <version>${apache.activemq.version}</version>
-        </dependency>             -->
-        <!--        <dependency>
-            <groupId>org.apache.activemq.tooling</groupId>
-            <artifactId>activemq-junit</artifactId>
-            <version>5.13.2</version>
-        </dependency>-->
-        <!--        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-broker</artifactId>
-            <version>${apache.activemq.version}</version>
-        </dependency>-->
-        
     </dependencies>
     <build>
         <plugins>
