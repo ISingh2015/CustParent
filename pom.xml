@@ -220,7 +220,7 @@
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
-            <version>1.4.5</version>
+            <version>1.4.7</version>
         </dependency>
         
         <dependency>
@@ -320,7 +320,7 @@
                             <resources> 
                                 <resource> 
                                     <description>Copy artifact to another directory</description> 
-                                    <targetPath>D:\workspacejuno09012013\CustServiceWeb\WebContent\WEB-INF\lib</targetPath> 
+                                    <targetPath>${project.directory}\CustServiceWeb\WebContent\WEB-INF\lib</targetPath> 
                                     <directory>${project.build.directory}</directory> 
                                     <includes> 
                                         <include>*.jar</include> 
