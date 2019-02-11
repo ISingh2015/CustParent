@@ -168,7 +168,7 @@
             <version>${org.hibernate-version}</version>
         </dependency>
         
-        <!-- Microsoft JDBC 4 Drivers
+        <!-- Microsoft JDBC 4 Drivers -->
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
