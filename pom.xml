@@ -9,6 +9,7 @@
     <!-- The Parent POM containing all the necessary and needed ARTIFCATS for the CUSTSERVICE,
          CUSTSERVICEWEB and CUSTWEB. ASLO contains the jars for the SWING Client
          03/03/2016  By Inderjit
+         
     -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>        
